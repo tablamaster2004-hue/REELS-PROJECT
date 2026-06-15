@@ -23,7 +23,7 @@ const AppRoutes = () => {
                 <Route path="/verify-otp" element={<OtpVerification />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/reset-password" element={<ResetPassword />} />
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Navigate to="/user/register" replace />} />
                 <Route path="/create-food" element={<CreateFood />} />
                 <Route path="/food-partner/:profile" element={<Profile />} />
                 <Route path="/saved" element={<Saved />} />
