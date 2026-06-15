@@ -9,7 +9,7 @@ const foodPartnerRoutes = require("../src/routes/food_partner.routes")
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173',"https://reels-app-7q57.onrender.com"],
     credentials: true
 }))
 app.use(express.json());
