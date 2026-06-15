@@ -1,6 +1,12 @@
 # 🍔 RELLS
 
-A food discovery Mobile platform where users can browse food items and watch food reels, while food partners can list and showcase their offerings.
+Food Reels Platform | React, Node.js, Express, MongoDB, JWT
+
+• Built a full-stack food discovery platform with separate User and Food Partner roles.
+• Implemented JWT authentication, OTP email verification, login, registration, and password reset flows.
+• Developed food post creation, likes, and saved-post functionality.
+• Designed REST APIs and MongoDB schemas for user, partner, and food data.
+• Deployed frontend and backend services using Render.
 
 ---
 
