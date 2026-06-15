@@ -19,8 +19,8 @@ A food discovery platform where users can browse food items and watch food reels
 
 | Layer | Technology |
 |---|---|
-| Backend | Node.js |
-| Frontend | (In Progress) |
+| Backend | NODE JS,EXPRESS JS, MONGODB |
+| Frontend | HTML,CSS,JAVASCRIPT,REACT |
 | Media Storage | [ImageKit.io](https://imagekit.io) |
 
 ---
