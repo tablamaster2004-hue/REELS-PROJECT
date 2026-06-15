@@ -30,7 +30,7 @@ const Home = () => {
                 const token = localStorage.getItem('accessToken')
 
                 const response = await axios.get(
-                    'http://localhost:3000/api/food',
+                    'https://reels-backend-rxue.onrender.com/api/food',
                     {
                         withCredentials: true,
                         headers: {
@@ -56,7 +56,7 @@ const Home = () => {
             const token = localStorage.getItem("accessToken");
 
             const response = await axios.post(
-                "http://localhost:3000/api/food/like",
+                "https://reels-backend-rxue.onrender.com/api/food/like",
                 { foodId },
                 {
                     withCredentials: true,
@@ -84,7 +84,7 @@ const Home = () => {
             const token = localStorage.getItem("accessToken");
 
             const response = await axios.post(
-                "http://localhost:3000/api/food/save",
+                "https://reels-backend-rxue.onrender.com/api/food/save",
                 { foodId },
                 {
                     withCredentials: true,
