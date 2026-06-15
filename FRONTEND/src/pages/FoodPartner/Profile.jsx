@@ -70,7 +70,7 @@ function Profile() {
                     </div>
 
                     <div className="stat">
-                        <h3>15K</h3>
+                        <h3>50K</h3>
                         <span>Customers</span>
                     </div>
                 </div>
