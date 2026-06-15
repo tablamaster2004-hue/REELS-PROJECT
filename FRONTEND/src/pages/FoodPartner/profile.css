@@ -1,0 +1,121 @@
+.profilePage {
+  min-height: 100vh;
+  background: #000;
+  color: white;
+}
+
+/* HEADER */
+
+.profileHeader {
+  padding: 20px;
+  border-bottom: 1px solid #222;
+}
+
+.profileTop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profileImage {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #1f8f3a;
+}
+
+.profileInfo h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.profileInfo p {
+  margin-top: 8px;
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+.profileStats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.stat h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.stat span {
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* VIDEO GRID */
+
+.videosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.videoCard {
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+}
+
+.videoCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gridVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ADD FOOD BUTTON */
+
+.add-food-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #1f8f3a;
+  color: white;
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(31, 143, 58, 0.4);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.add-food-btn:hover {
+  background: #158f2f;
+  box-shadow: 0 6px 16px rgba(31, 143, 58, 0.6);
+  transform: scale(1.1);
+}
+
+.add-food-btn:active {
+  transform: scale(0.95);
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .add-food-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    bottom: 20px;
+    right: 20px;
+  }
+}

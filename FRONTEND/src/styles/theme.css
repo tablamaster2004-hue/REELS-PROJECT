@@ -1,0 +1,38 @@
+/* Light theme (default) */
+:root {
+  --primary-color: #1a73e8;
+  --primary-hover: #1557b0;
+  --secondary-color: #5f6368;
+  --background-primary: #ffffff;
+  --background-secondary: #f8f9fa;
+  --text-primary: #202124;
+  --text-secondary: #5f6368;
+  --border-color: #dadce0;
+  --input-border: #dadce0;
+  --input-focus: #1a73e8;
+  --error-color: #d33b27;
+  --success-color: #0d652d;
+  --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --transition-duration: 0.3s;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #8ab4f8;
+    --primary-hover: #aecbfa;
+    --secondary-color: #9aa0a6;
+    --background-primary: #202124;
+    --background-secondary: #292a2d;
+    --text-primary: #e8eaed;
+    --text-secondary: #9aa0a6;
+    --border-color: #3c4043;
+    --input-border: #3c4043;
+    --input-focus: #8ab4f8;
+    --error-color: #f28482;
+    --success-color: #81c995;
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.5);
+  }
+}
