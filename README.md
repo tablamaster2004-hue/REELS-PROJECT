@@ -1,6 +1,6 @@
 # 🍔 RELLS
 
-A food discovery platform where users can browse food items and watch food reels, while food partners can list and showcase their offerings.
+A food discovery Mobile platform where users can browse food items and watch food reels, while food partners can list and showcase their offerings.
 
 ---
 
