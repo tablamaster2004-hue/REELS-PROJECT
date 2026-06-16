@@ -24,6 +24,15 @@ transporter.verify((error, success) => {
 // Function to send email
 const sendEmail = async (to, subject, text, html) => {
     try {
+
+        console.log({
+            GOOGLE_USER: process.env.GOOGLE_USER,
+            CLIENT_ID_EXISTS: !!process.env.GOOGLE_CLIENT_ID,
+            CLIENT_SECRET_EXISTS: !!process.env.GOOGLE_CLIENT_SECRET,
+            REFRESH_TOKEN_EXISTS: !!process.env.GOOGLE_REFRESH_TOKEN,
+        });
+
+
         const info = await transporter.sendMail({
             from: `"Your Name" <${config.GOOGLE_USER}>`,
             to,
