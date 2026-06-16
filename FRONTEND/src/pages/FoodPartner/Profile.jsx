@@ -20,7 +20,7 @@ function Profile() {
             console.log("TOKEN SENT")
 
             const response = await axios.get(
-                `http://localhost:3000/api/food-partner/${profile}`,
+                `https://reels-backend-rxue.onrender.com/api/food-partner/${profile}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

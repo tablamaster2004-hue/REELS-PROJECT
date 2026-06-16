@@ -15,7 +15,7 @@ export default function UserRegister() {
     const password = e.target.password.value
     const termsAccepted = e.target.terms.checked
 
-    const response = await axios.post("http://localhost:3000/api/auth/user/register",{
+    const response = await axios.post("https://reels-backend-rxue.onrender.com/api/auth/user/register",{
         username:fullName,
         email,
         password
