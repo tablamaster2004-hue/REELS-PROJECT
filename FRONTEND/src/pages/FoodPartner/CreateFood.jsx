@@ -53,7 +53,7 @@ const CreateFood = () => {
     const token = localStorage.getItem("accessToken");
 
     const response = await axios.post(
-      "https://reels-backend-rxue.onrender.com/api/food",
+      "http://localhost:3000/api/food",
       data,
       {
         headers: {

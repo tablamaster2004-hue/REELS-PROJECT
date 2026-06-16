@@ -17,7 +17,7 @@ export default function PartnerRegister() {
     const password = e.target.password.value
     const termsAccepted = e.target.terms.checked
 
-    axios.post("https://reels-backend-rxue.onrender.com/api/auth/foodPartner/register", {
+    axios.post("http://localhost:3000/api/auth/foodPartner/register", {
       name:businessName,
       contactName,
       email,

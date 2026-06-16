@@ -18,7 +18,7 @@ export default function PartnerLogin() {
 
     try {
       const response = await axios.post(
-        'https://reels-backend-rxue.onrender.com/api/auth/foodPartner/login',
+        'http://localhost:3000/api/auth/foodPartner/login',
         {
           email,
           password

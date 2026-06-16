@@ -17,7 +17,7 @@ function Saved() {
             const token = localStorage.getItem("accessToken");
 
             const response = await axios.get(
-                "https://reels-backend-rxue.onrender.com/api/food/saved",
+                "http://localhost:3000/api/food/saved",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

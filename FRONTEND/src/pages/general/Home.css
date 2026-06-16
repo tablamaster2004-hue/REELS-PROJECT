@@ -84,6 +84,7 @@
 }
 
 .visit-store-btn {
+  width: 28%;
   background-color: var(--primary-color);
   color: white;
   border: none;

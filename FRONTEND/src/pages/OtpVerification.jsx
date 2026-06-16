@@ -32,8 +32,8 @@ export default function OtpVerification() {
         try {
             const endpoint =
                 userType === "user"
-                    ? "https://reels-backend-rxue.onrender.com/api/auth/user/verify_email"
-                    : "https://reels-backend-rxue.onrender.com/api/auth/foodPartner/verify_email"
+                    ? "http://localhost:3000/api/auth/user/verify_email"
+                    : "http://localhost:3000/api/auth/foodPartner/verify_email"
 
             const response = await axios.post(endpoint, {
                 otp,
@@ -68,8 +68,8 @@ export default function OtpVerification() {
 
         try {
             const endpoint = userType === 'user'
-                ? 'https://reels-backend-rxue.onrender.com/api/auth/user/resend_otp'
-                : 'https://reels-backend-rxue.onrender.com/api/auth/foodPartner/resend_otp'
+                ? 'http://localhost:3000/api/auth/user/resend_otp'
+                : 'http://localhost:3000/api/auth/foodPartner/resend_otp'
 
             const response = await axios.post(endpoint, { email })
             console.log("OTP resent successfully:", response.data)

@@ -45,7 +45,7 @@ export default function ResetPassword() {
 
         try {
             const response = await axios.post(
-                'https://reels-backend-rxue.onrender.com/api/auth/reset-password',
+                'http://localhost:3000/api/auth/reset-password',
                 {
                     token,
                     newPassword: password

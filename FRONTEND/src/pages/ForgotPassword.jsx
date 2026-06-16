@@ -20,8 +20,8 @@ export default function ForgotPassword() {
 
     try {
       const endpoint = userType === 'foodPartner' 
-        ? 'https://reels-backend-rxue.onrender.com/api/auth/foodPartner/forgot-password'
-        : 'https://reels-backend-rxue.onrender.com/api/auth/user/forgot-password'
+        ? 'http://localhost:3000/api/auth/foodPartner/forgot-password'
+        : 'http://localhost:3000/api/auth/user/forgot-password'
 
       const response = await axios.post(endpoint, { email })
 
