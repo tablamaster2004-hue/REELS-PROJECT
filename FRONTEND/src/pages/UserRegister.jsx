@@ -7,32 +7,44 @@ import axios from 'axios'
 export default function UserRegister() {
   const navigate = useNavigate()
 
-  const handleSubmit = async (e) =>{
-    e.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    const fullName = e.target.fullname.value
-    const email = e.target.email.value
-    const password = e.target.password.value
-    const termsAccepted = e.target.terms.checked
+    const fullName = e.target.fullname.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-    const response = await axios.post("https://reels-backend-rxue.onrender.com/api/auth/user/register",{
-        username:fullName,
-        email,
-        password
-    },{
-        withCredentials:true
-    })
-    .then((response) => {
-      console.log("Registration successful:", response.data)
-      // Redirect to OTP verification page
-      navigate('/verify-otp', { state: { userType: 'user', email } })
-    })
-    .catch((error) => {
-      console.error("Registration error:", error)
-    })
+    try {
+      const response = await axios.post(
+        "https://reels-backend-rxue.onrender.com/api/auth/user/register",
+        {
+          username: fullName,
+          email,
+          password,
+        },
+        {
+          withCredentials: true,
+        }
+      );
 
+      console.log("Registration successful:", response.data);
+      console.log("Status:", response.status);
 
-  }  
+      navigate("/verify-otp", {
+        state: {
+          userType: "user",
+          email,
+        },
+      });
+    } catch (error) {
+      console.error("Registration error:", error);
+
+      if (error.response) {
+        console.log("Error response:", error.response.data);
+        console.log("Status:", error.response.status);
+      }
+    }
+  }
   return (
     <div className="auth-container">
       <div className="auth-box">
