@@ -5,10 +5,8 @@ console.log("BREVO_SMTP_USER =", process.env.BREVO_SMTP_USER);
 console.log("BREVO_SMTP_PASS exists =", !!process.env.BREVO_SMTP_PASS);
 const transporter = nodemailer.createTransport({
     host: "smtp-relay.brevo.com",
-    port: 2525,
+    port: 587,
     secure: false,
-    logger: true,
-    debug: true,
     auth: {
         user: process.env.BREVO_SMTP_USER,
         pass: process.env.BREVO_SMTP_PASS,
@@ -16,7 +14,6 @@ const transporter = nodemailer.createTransport({
 });
 
 // Verify the connection configuration
-console.log("Creating transporter...");
 transporter.verify((error, success) => {
     if (error) {
         console.error('Error connecting to email server:', error);
@@ -29,12 +26,7 @@ transporter.verify((error, success) => {
 const sendEmail = async (to, subject, text, html) => {
     try {
 
-        console.log({
-            BREVO_USER_EXISTS: !!process.env.BREVO_SMTP_USER,
-            BREVO_PASS_EXISTS: !!process.env.BREVO_SMTP_PASS,
-        });
-
-
+       
         const info = await transporter.sendMail({
             from: `"Reels App" <${process.env.GOOGLE_USER}>`,
             to,
