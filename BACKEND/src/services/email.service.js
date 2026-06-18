@@ -1,16 +1,15 @@
 const nodemailer = require('nodemailer');
 const config = require('../config/config');
 
+console.log("BREVO_SMTP_USER =", process.env.BREVO_SMTP_USER);
+console.log("BREVO_SMTP_PASS exists =", !!process.env.BREVO_SMTP_PASS);
 const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: "smtp-relay.brevo.com",
     port: 587,
     secure: false,
     auth: {
-        type: "OAuth2",
-        user: process.env.GOOGLE_USER,
-        clientId: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
+        user: process.env.BREVO_SMTP_USER,
+        pass: process.env.BREVO_SMTP_PASS,
     },
 });
 
@@ -28,21 +27,18 @@ const sendEmail = async (to, subject, text, html) => {
     try {
 
         console.log({
-            GOOGLE_USER: process.env.GOOGLE_USER,
-            CLIENT_ID_EXISTS: !!process.env.GOOGLE_CLIENT_ID,
-            CLIENT_SECRET_EXISTS: !!process.env.GOOGLE_CLIENT_SECRET,
-            REFRESH_TOKEN_EXISTS: !!process.env.GOOGLE_REFRESH_TOKEN,
+            BREVO_USER_EXISTS: !!process.env.BREVO_SMTP_USER,
+            BREVO_PASS_EXISTS: !!process.env.BREVO_SMTP_PASS,
         });
 
 
         const info = await transporter.sendMail({
-            from: `"Your Name" <${config.GOOGLE_USER}>`,
+            from: `"Reels App" <${process.env.GOOGLE_USER}>`,
             to,
             subject,
             text,
             html,
         });
-
         console.log('Message sent:', info.messageId);
     } catch (error) {
         console.error('Error sending email:', error);
